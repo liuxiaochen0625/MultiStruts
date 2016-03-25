@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<!-- Struts 2的Action必须放在指定的包空间下定义 -->
+	<package name="struts2qs" extends="struts-default" namespace="">
+		<!-- 定义login的Action，该Action的实现类为
+			org.crazyit.struts2.action.LoginRegistAction -->
+		<!--  
+		<action name="login" class="action.LoginAction">
+			<result name="error">/WEB-INF/content/error.jsp</result>
+			<result name="success">/WEB-INF/content/welcome.jsp</result>
+		</action>
+		<action name="">
+			<result>.</result> 
+		</action>
+		<action name="*">
+			<result>/WEB-INF/content/{1}.jsp</result> 
+		</action>
+		-->
+		<action name="login" class="action.LoginAction_context">
+			<!-- 定义处理结果和视图资源之间映射关系 -->
+			<result name="error">/WEB-INF/context/error.jsp</result>
+			<result name="success">/WEB-INF/context/welcome.jsp</result>
+		</action>
+		<action name="*">
+			<result>/WEB-INF/context/{1}.jsp</result> 
+		</action>
+		
+	</package>
+</struts>
+	
